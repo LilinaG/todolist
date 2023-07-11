@@ -1,0 +1,11 @@
+{
+    "name": "lili/todolist",
+    "autoload": {
+        "psr-4": {
+            "Lili\\Todolist\\": "src/",
+            "Database\\": "database",
+            "App\\": "app"
+        }
+    },
+    "require": {}
+}
