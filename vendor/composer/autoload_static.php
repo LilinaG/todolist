@@ -11,12 +11,28 @@ class ComposerStaticInitd57d10c5d96aaa08140bdf3b637e97b3
         array (
             'Lili\\Todolist\\' => 14,
         ),
+        'D' => 
+        array (
+            'Database\\' => 9,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Lili\\Todolist\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/database',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 

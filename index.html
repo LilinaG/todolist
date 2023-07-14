@@ -1,0 +1,151 @@
+ 
+ 
+ <!-- <!doctype html>
+ <html lang="en">
+ 
+ <head>
+   <title>TODO LIST</title>
+   
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+ 
+ </head>
+ 
+ <body>
+   
+   <main class="container">
+    <br/>
+     <div class="card">
+         <div class="card-header">
+             Lista de tareas (TODO LIST)
+         </div>
+         <div class="card-body">
+            <div class="mb-3">
+                <form method="POST" action="public/index.php">
+                    <label for="tarea" class="form-label">Tarea:</label>
+                    <input type="text"
+                        class="form-control" name="tarea" id="tarea" 
+                        aria-describedby="helpId" 
+                        placeholder="Escribe tu tarea">
+                    <br/>
+                    <input 
+                        name="agregar_tarea" 
+                        id="agregar_tarea" 
+                        class="btn btn-primary" 
+                        type="submit" 
+                        value="Agregar Tarea">
+                </form>
+            </div>
+
+         <ul class="list-group">
+            <li class="list-group-item"> 
+                <input class="form-check-input float-start" type="checkbox" value="" id="" checked>
+                   &nbsp; <span class="float-start">Tarea 1 </span>
+                <h6 class="float-start">
+                   &nbsp; <span class="badge bg-danger"> Editar </span>
+                </h6>
+                <h6 class="float-start">
+                    &nbsp; <span class="badge bg-danger"> Eliminar </span>
+                 </h6>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input float-start" type="checkbox" value="" id="" checked>
+                   &nbsp; <span class="float-start">Tarea 1 </span>
+                <h6 class="float-start">
+                   &nbsp; <span class="badge bg-danger"> Editar </span>
+                </h6>
+                <h6 class="float-start">
+                    &nbsp; <span class="badge bg-danger"> Eliminar </span>
+                 </h6>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input float-start" type="checkbox" value="" id="" checked>
+                &nbsp; <span class="float-start">Tarea 1 </span>
+             <h6 class="float-start">
+                &nbsp; <span class="badge bg-danger">Editar</span>
+             </h6>
+             <h6 class="float-start">
+                &nbsp; <span class="badge bg-danger"> Eliminar </span>
+             </h6>
+            </li>
+        </ul>
+        </div>
+         
+    </div> 
+   </main>
+   
+   
+ </body>
+ 
+ </html>  -->
+ 
+ 
+ 
+ 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Todo List</title>
+
+</head>
+<body>
+    <h1>TODO List</h1>
+
+    
+        <form method="POST" action="public/index.php">
+        <label for="tarea">Tarea:</label>
+        <input type="text" id="tarea" name="tarea" placeholder="Escribe tu tarea" required>
+
+       <br>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion"></textarea>
+
+        <br>
+
+        <label for="fechaCreacion">Fecha de creación:</label>
+        <input type="date" id="fechaCreacion" name="fechaCreacion">
+
+        <br>
+
+        <!-- <label for="fechaVencimiento">Fecha de vencimiento:</label>
+        <input type="date" id="fechaVencimiento" name="fechaVencimiento" required> -->
+
+        <br>
+
+        <!-- <label for="completada">Completada:</label>
+        <input type="checkbox" id="completada" name="completada"> -->
+
+        <br> 
+
+        <input type="submit" value="Agregar tarea">
+    </form>
+
+    <div id="taskList">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tarea</th>
+              <th>Descripción</th>
+              <th>Fecha de Creación</th>
+            </tr>
+          </thead>
+          <tbody method="POST" action="public/index.php">
+          </tbody>
+        </table>
+      </div>
+      
+   
+    
+</body>
+</html> 
